@@ -1,5 +1,7 @@
 
-package "python-powerupdater"
+package "python-powerupdater" do
+  action :upgrade
+end
 
 cron "powerupdater" do
     action(:delete) unless node.mongodb.ismaster
